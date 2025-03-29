@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://plus.unsplash.com/premium_photo-1708105560977-87a0c2b08254?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1551554781-c46200ea959d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
       background-size: cover;
       color: #1a1a1a;
       padding: 2vw;
@@ -119,4 +119,89 @@
 
     section h2 {
       color: #222;
-      text-shad
+      text-shadow: 1px 1px 2px #d4af37;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 2px solid #d4af37;
+      font-size: 0.875rem;
+      color: #444;
+      background-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0.5rem;
+      }
+      .container {
+        margin: 0.5rem;
+        padding: 0.5rem;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('nav a');
+      const sections = document.querySelectorAll('section');
+
+      links.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+
+          sections.forEach(sec => sec.classList.remove('active'));
+          if (target) {
+            target.classList.add('active');
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <img src="Darkline Studio - DS 2.png" alt="Darkline Studio - DS 2" class="bottom-left-logo">
+
+  <div class="container">
+    <div class="hero">
+      <img src="Darkline Studio 2.png" alt="Darkline Studio 2" class="center-logo">
+      <h1>Freelance Project Management</h1>
+      <p>Bringing precision and polish to your vision—on time and with style.</p>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <section id="services">
+      <h2>Services</h2>
+      <p>[Placeholder for services offered: project planning, coordination, events, etc.]</p>
+    </section>
+  </div>
+
+  <div class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p>[Brief professional bio and values statement here]</p>
+    </section>
+  </div>
+
+  <div class="container">
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>[Email address or contact form placeholder]</p>
+    </section>
+  </div>
+
+  <div class="container">
+    <footer>
+      &copy; 2025 Darkline Studio. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
