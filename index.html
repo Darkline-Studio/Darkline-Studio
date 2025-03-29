@@ -15,6 +15,23 @@
       box-sizing: border-box;
     }
 
+    .top-left-logo {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: auto;
+      z-index: 1000;
+    }
+
+    .center-logo {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      margin: 1rem auto;
+      display: block;
+    }
+
     .container {
       border: 1px solid rgba(255, 255, 255, 0.2);
       padding: 1rem;
@@ -155,10 +172,13 @@
   </script>
 </head>
 <body>
+  <img src="assets/Darkline Studio - DS.png" alt="Darkline Studio Icon" class="top-left-logo">
+
   <div class="container">
     <div class="logo">Darkline Studio</div>
     <div class="hero">
-      <h1>Darkline Studio</h1>
+      <img src="assets/Darkline Studio.png" alt="Darkline Studio Full Logo" class="center-logo">
+      <h1>Freelance Project Management</h1>
       <p>Bringing precision and polish to your vision—on time and with style.</p>
     </div>
     <nav>
