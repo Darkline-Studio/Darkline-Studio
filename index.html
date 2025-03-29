@@ -8,14 +8,14 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://www.transparenttextures.com/patterns/marble.png') repeat;
-      background-color: #f8f8f8;
+      background: url('https://images.unsplash.com/photo-1605283165701-94f0cbf9f9c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #1a1a1a;
     }
 
     header {
-      background-color: rgba(255, 255, 255, 0.9);
-      border-bottom: 2px solid #b0b0b0;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-bottom: 2px solid #ccc;
       position: fixed;
       top: 0;
       width: 100%;
@@ -24,20 +24,21 @@
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
     }
 
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #333;
+      color: #222;
       letter-spacing: 1px;
+      text-shadow: 1px 1px 2px #aaa;
     }
 
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
-      color: #444;
+      color: #333;
       font-weight: 500;
       position: relative;
     }
@@ -49,7 +50,7 @@
       left: 0;
       width: 0%;
       height: 2px;
-      background: linear-gradient(to right, #999, #ccc);
+      background: linear-gradient(to right, #b0b0b0, #e0e0e0, #b0b0b0);
       transition: width 0.3s;
     }
 
@@ -60,13 +61,15 @@
     .hero {
       padding: 8rem 2rem 4rem;
       text-align: center;
-      background: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(4px);
     }
 
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
       color: #111;
+      text-shadow: 1px 1px 3px #bbb;
     }
 
     .hero p {
@@ -80,14 +83,25 @@
       padding: 4rem 2rem;
       max-width: 1000px;
       margin: 0 auto;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid #ccc;
+      border-left: 5px solid transparent;
+      border-image: linear-gradient(to bottom, #c0c0c0, #f0f0f0, #c0c0c0) 1;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+      color: #222;
+      text-shadow: 1px 1px 2px #aaa;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.85);
-      border-top: 2px solid #b0b0b0;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-top: 2px solid #ccc;
       font-size: 0.875rem;
+      color: #444;
     }
   </style>
 </head>
@@ -126,4 +140,3 @@
   </footer>
 </body>
 </html>
-
