@@ -11,6 +11,8 @@
       background: url('https://images.unsplash.com/photo-1566305977571-5666677c6e98?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFyYmxlfGVufDB8fDB8fHww') no-repeat center center fixed;
       background-size: cover;
       color: #1a1a1a;
+      padding: 2vw;
+      box-sizing: border-box;
     }
 
     .logo {
@@ -25,10 +27,11 @@
 
     .hero {
       text-align: center;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
-      padding: 2rem 2rem 1rem;
-      margin: 0 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      margin: auto;
+      max-width: 960px;
     }
 
     .hero h1 {
@@ -46,13 +49,14 @@
     }
 
     nav {
-      background-color: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
-      padding: 1rem 2rem;
+      background-color: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
       display: flex;
       justify-content: center;
       box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-      margin: 0 1rem;
+      margin: 2rem auto;
+      max-width: 960px;
     }
 
     nav a {
@@ -92,14 +96,14 @@
 
     section {
       padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: 2rem auto;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
       border: 1px solid #d4af37;
       border-left: 5px solid transparent;
       border-image: linear-gradient(to bottom, #f6e27f, #d4af37, #f6e27f) 1;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin: 2rem auto;
+      max-width: 960px;
       display: none;
     }
 
@@ -115,19 +119,27 @@
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
       border-top: 2px solid #d4af37;
       font-size: 0.875rem;
       color: #444;
-      margin: 0 1rem;
+      margin: 2rem auto;
+      max-width: 960px;
     }
 
     @media (max-width: 768px) {
+      body {
+        padding: 0;
+      }
       .hero,
       nav,
-      footer {
+      footer,
+      section {
         margin: 0;
+        border-left: none;
+        border-right: none;
+        max-width: 100%;
       }
     }
   </style>
