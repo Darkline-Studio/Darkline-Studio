@@ -13,30 +13,49 @@
       color: #1a1a1a;
     }
 
-    header {
-      background-color: rgba(255, 255, 255, 0.95);
-      border-bottom: 2px solid #d4af37;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-    }
-
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
       color: #222;
       letter-spacing: 1px;
       text-shadow: 1px 1px 2px #d4af37;
+      text-align: center;
+      padding: 1rem 0 0.5rem;
+    }
+
+    .hero {
+      text-align: center;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(4px);
+      padding: 2rem 2rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #111;
+      text-shadow: 1px 1px 3px #d4af37;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #444;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-top: 2px solid #d4af37;
+      border-bottom: 2px solid #d4af37;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
     }
 
     nav a {
-      margin-left: 1.5rem;
       text-decoration: none;
       color: #333;
       font-weight: 500;
@@ -57,27 +76,6 @@
 
     nav a:hover::after {
       width: 100%;
-    }
-
-    .hero {
-      padding: 8rem 2rem 4rem;
-      text-align: center;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(4px);
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #111;
-      text-shadow: 1px 1px 3px #d4af37;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      color: #444;
-      max-width: 600px;
-      margin: 0 auto;
     }
 
     section {
@@ -131,19 +129,17 @@
   </script>
 </head>
 <body>
-  <header>
-    <div class="logo">Darkline Studio</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
+  <div class="logo">Darkline Studio</div>
   <div class="hero">
     <h1>Freelance Project Management</h1>
     <p>Bringing precision and polish to your vision—on time and with style.</p>
   </div>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <section id="services">
     <h2>Services</h2>
