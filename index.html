@@ -58,8 +58,8 @@
       padding: 0.5rem 1rem;
     }
 
-    nav a::before,
-    nav a::after {
+    nav a[href="#services"]::before,
+    nav a[href="#services"]::after {
       content: '';
       position: absolute;
       top: 0;
@@ -68,16 +68,16 @@
       background: #d4af37;
     }
 
-    nav a::before {
+    nav a[href="#services"]::before {
       left: 0;
     }
 
-    nav a::after {
+    nav a[href="#services"]::after {
       right: 0;
     }
 
-    nav a:hover::before,
-    nav a:hover::after {
+    nav a[href="#services"]:hover::before,
+    nav a[href="#services"]:hover::after {
       width: 3px;
       background: #f6e27f;
     }
@@ -97,7 +97,7 @@
     }
 
     footer {
-      max-width: 700px;
+      max-width: 500px;
       margin: 3rem auto;
       border: 2px solid #d4af37;
       padding: 1rem;
