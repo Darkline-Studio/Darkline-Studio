@@ -15,7 +15,7 @@
     }
 
     header {
-      max-width: 700px;
+      max-width: 500px;
       margin: 4rem auto 2rem;
       text-align: center;
       border: 2px solid #d4af37;
@@ -27,6 +27,13 @@
       font-size: 3rem;
       color: #f6e27f;
       margin: 0;
+    }
+
+    .gold-line {
+      height: 2px;
+      background: #d4af37;
+      margin: 1rem auto;
+      width: 80%;
     }
 
     header p {
@@ -59,23 +66,20 @@
       bottom: 0;
       width: 2px;
       background: #d4af37;
-      transition: transform 0.3s ease;
-      transform: scaleY(0);
     }
 
     nav a::before {
       left: 0;
-      transform-origin: bottom;
     }
 
     nav a::after {
       right: 0;
-      transform-origin: top;
     }
 
     nav a:hover::before,
     nav a:hover::after {
-      transform: scaleY(1);
+      width: 3px;
+      background: #f6e27f;
     }
 
     nav a:hover {
@@ -95,8 +99,8 @@
     footer {
       max-width: 700px;
       margin: 3rem auto;
-      border-top: 2px solid #d4af37;
-      padding-top: 1rem;
+      border: 2px solid #d4af37;
+      padding: 1rem;
       text-align: center;
       color: #f6e27f;
       font-size: 0.85rem;
@@ -106,6 +110,7 @@
 <body>
   <header>
     <h1>Darkline Studio</h1>
+    <div class="gold-line"></div>
     <p>Project Management & Event Coordination</p>
   </header>
 
