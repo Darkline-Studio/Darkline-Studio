@@ -1,206 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Darkline Studio</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://raw.githubusercontent.com/darkline-studio/website/main/ChatGPT Image Mar 29, 2025, 01_11_29 AM.png') no-repeat center center fixed;
+      background: url('https://github.com/Darkline-Studio/Darkline-Studio/blob/assets/GreenMarbleBackgroundSage.png?raw=true') no-repeat center center fixed;
       background-size: cover;
-      color: #1a1a1a;
-      padding: 2vw;
+      color: #f6e27f;
       box-sizing: border-box;
     }
 
-    .bottom-left-logo {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      width: 50px;
-      height: auto;
-      z-index: 1000;
-    }
-
-    .center-logo {
-      max-width: 400px;
-      width: 100%;
-      height: auto;
-      margin: 1rem auto;
-      display: block;
-    }
-
-    .container {
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 1rem;
-      margin: 1rem auto;
-      max-width: 960px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-      background-color: transparent;
-    }
-
-    .hero {
+    header {
+      max-width: 500px;
+      margin: 2rem auto 2rem;
       text-align: center;
-      padding: 2rem;
+      border: 2px solid #d4af37;
+      padding: 2rem 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     }
 
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #111;
+    header h1 {
+      font-family: 'Copperplate Gothic', serif;
+      font-size: 3rem;
+      color: #f6e27f;
+      margin: 0;
+      font-stretch: expanded;
+      font-weight: 300;
+      letter-spacing: 0.05em;
     }
 
-    .hero p {
-      font-size: 1.25rem;
-      color: #444;
-      max-width: 600px;
-      margin: 0 auto;
+    .gold-line {
+      height: 1px;
+      background: #d4af37;
+      margin: 1rem auto;
+      width: 80%;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #e0c97f;
+      margin-top: 0.5rem;
     }
 
     nav {
-      padding: 1rem;
       display: flex;
       justify-content: center;
-      background-color: transparent;
-      border: none;
-      box-shadow: none;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 3rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
       position: relative;
-      cursor: pointer;
+      text-decoration: none;
+      color: #f6e27f;
+      font-weight: 600;
+      font-size: 1rem;
       padding: 0.5rem 1.5rem;
+      cursor: pointer;
       transition: all 0.3s ease;
-      background-color: transparent;
     }
 
-    nav a:not(:last-child) {
-      border-right: 2px solid #d4af37;
-    }
-
-    nav a::before {
+    nav a::after {
       content: '';
       position: absolute;
-      top: 0;
-      bottom: 0;
       left: 0;
-      width: 2px;
-      background: #d4af37;
-      transform: scaleY(0);
+      bottom: -5px;
+      width: 100%;
+      height: 1px;
+      background: #f6e27f;
+      transform: scaleX(0);
+      transform-origin: center;
       transition: transform 0.3s ease;
-      transform-origin: top;
     }
 
-    nav a:hover::before {
-      transform: scaleY(1);
+    nav a:hover::after {
+      transform: scaleX(1);
     }
 
     nav a:hover {
-      color: #d4af37;
+      color: #ffffff;
     }
 
-    section {
-      padding: 4rem 2rem;
-      border: 1px solid #d4af37;
-      border-left: 5px solid transparent;
-      border-image: linear-gradient(to bottom, #f6e27f, #d4af37, #f6e27f) 1;
+    .content-box {
       display: none;
+      max-width: 500px;
+      margin: 2rem auto 3rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      color: #d7d8bf;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
 
-    section.active {
+    .content-box.active {
       display: block;
     }
 
-    section h2 {
-      color: #222;
-      text-shadow: 1px 1px 2px #d4af37;
-    }
-
     footer {
+      max-width: 500px;
+      margin: 3rem auto;
       text-align: center;
-      padding: 2rem;
-      border-top: 2px solid #d4af37;
-      font-size: 0.875rem;
-      color: #444;
-      background-color: transparent;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding: 0.5rem;
-      }
-      .container {
-        margin: 0.5rem;
-        padding: 0.5rem;
-      }
+      font-size: 0.85rem;
+      color: #f6e27f;
+      border: 2px solid #d4af37;
+      padding: 1rem;
+      box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.4);
     }
   </style>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const links = document.querySelectorAll('nav a');
-      const sections = document.querySelectorAll('section');
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll("nav a");
+      const sections = document.querySelectorAll(".content-box");
+
+      const defaultSection = document.getElementById("about");
+      if (defaultSection) defaultSection.classList.add("active");
 
       links.forEach(link => {
-        link.addEventListener('click', function (e) {
+        link.addEventListener("click", e => {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
+          const id = link.getAttribute("href").substring(1);
 
-          sections.forEach(sec => sec.classList.remove('active'));
-          if (target) {
-            target.classList.add('active');
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
+          sections.forEach(section => {
+            section.classList.remove("active");
+          });
+
+          const target = document.getElementById(id);
+          if (target) target.classList.add("active");
         });
       });
     });
   </script>
 </head>
 <body>
-  <img src="Darkline Studio - DS 2.png" alt="Darkline Studio - DS 2" class="bottom-left-logo">
+  <header>
+    <h1>Darkline Studio</h1>
+    <div class="gold-line"></div>
+    <p>Project Management & Event Coordination</p>
+  </header>
 
-  <div class="container">
-    <div class="hero">
-      <img src="Darkline Studio 2.png" alt="Darkline Studio 2" class="center-logo">
-      <h1>Project Management & Event Coordination for Creative, Complex, and Meaningful Work</h1>
-      <p>Structure for every stage.</p>
-    </div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#about">ABOUT</a>
+    <a href="#services">SERVICES</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+  <div id="about" class="content-box active">
+    <p>Hello, my name is Danielle Blackwood. I specialize in project management and event coordination with a focus on creative and meaningful work.</p>
+    <p>[Add a short professional biography, background, or your mission here.]</p>
   </div>
 
-  <div class="container">
-    <section id="services">
-      <h2>Services</h2>
-      <p>[Placeholder for services offered: project planning, coordination, events, etc.]</p>
-    </section>
+  <div id="services" class="content-box">
+    <p>Our services include timeline development, vendor coordination, logistics planning, budget tracking, and more—tailored to your event or project needs.</p>
+    <p>[You can break this into bulleted offerings or include package descriptions.]</p>
   </div>
 
-  <div class="container">
-    <section id="about">
-      <h2>About</h2>
-      <p>[Brief professional bio and values statement here]</p>
-    </section>
+  <div id="contact" class="content-box">
+    <p>Contact us at <a href="mailto:hello@darkline.studio" style="color: #f6e27f; text-decoration: underline;">hello@darkline.studio</a> or follow us on social media @DarklineStudio for updates and availability.</p>
+    <p>[You could also embed a contact form here or list office hours and response time expectations.]</p>
   </div>
 
-  <div class="container">
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>[Email address or contact form placeholder]</p>
-    </section>
-  </div>
-
-  <div class="container">
-    <footer>
-      &copy; 2025 Darkline Studio. All rights reserved.
-    </footer>
-  </div>
+  <footer>
+    &copy; 2025 Darkline Studio. All rights reserved.
+  </footer>
 </body>
 </html>
