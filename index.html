@@ -91,7 +91,7 @@
     .content-box {
       display: none;
       max-width: 600px;
-      margin: 2rem auto;
+      margin: 4rem auto 2rem;
       background-color: rgba(0, 0, 0, 0.4);
       padding: 2rem;
       color: #fff;
@@ -119,6 +119,9 @@
     document.addEventListener("DOMContentLoaded", () => {
       const links = document.querySelectorAll("nav a");
       const sections = document.querySelectorAll(".content-box");
+
+      const defaultSection = document.getElementById("about");
+      if (defaultSection) defaultSection.classList.add("active");
 
       links.forEach(link => {
         link.addEventListener("click", e => {
@@ -151,14 +154,17 @@
 
   <div id="about" class="content-box">
     <p>Hello, my name is Danielle Blackwood. I specialize in project management and event coordination with a focus on creative and meaningful work.</p>
+    <p>[Add a short professional biography, background, or your mission here.]</p>
   </div>
 
   <div id="services" class="content-box">
     <p>Our services include timeline development, vendor coordination, logistics planning, budget tracking, and more—tailored to your event or project needs.</p>
+    <p>[You can break this into bulleted offerings or include package descriptions.]</p>
   </div>
 
   <div id="contact" class="content-box">
-    <p>Contact us at hello@darkline.studio or follow us on social media @DarklineStudio for updates and availability.</p>
+    <p>Contact us at <a href="mailto:hello@darkline.studio" style="color: #f6e27f; text-decoration: underline;">hello@darkline.studio</a> or follow us on social media @DarklineStudio for updates and availability.</p>
+    <p>[You could also embed a contact form here or list office hours and response time expectations.]</p>
   </div>
 
   <footer>
