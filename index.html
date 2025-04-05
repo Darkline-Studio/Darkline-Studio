@@ -1,183 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darkline Studio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darkline Studio | Project Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @font-face {
-      font-family: 'Copperplate Gothic';
-      src: url('fonts/BrandinkSans-Light.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/refs/heads/assets/GreenMarbleBackground.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #f6e27f;
-      box-sizing: border-box;
-    }
-
-    header {
-      max-width: 500px;
-      margin: 2rem auto 2rem;
-      text-align: center;
-      border: 2px solid #d4af37;
-      padding: 2rem 2rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    header h1 {
-      font-family: 'Copperplate Gothic', serif;
-      font-size: 3rem;
-      color: #f6e27f;
-      margin: 0;
-      font-stretch: expanded;
-      font-weight: 300;
-      letter-spacing: 0.05em;
-    }
-
-    .gold-line {
-      height: 1px;
-      background: #d4af37;
-      margin: 1rem auto;
-      width: 80%;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #e0c97f;
-      margin-top: 0.5rem;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      margin-bottom: 3rem;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      font-family: 'Copperplate Gothic', sans-serif;
-    }
-
-    nav a {
-      position: relative;
-      text-decoration: none;
-      color: #f6e27f;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 0.5rem 1.5rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 100%;
-      height: 1px;
-      background: #f6e27f;
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform 0.3s ease;
-    }
-
-    nav a:hover::after {
-      transform: scaleX(1);
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    .content-box {
-      display: none;
-      max-width: 500px;
-      margin: 2rem auto 3rem;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
-      color: #fff;
-      font-size: 1.2rem;
-      border-radius: 6px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    }
-
-    .content-box.active {
-      display: block;
-    }
-
-    footer {
-      max-width: 500px;
-      margin: 3rem auto;
-      text-align: center;
-      font-size: 0.85rem;
-      color: #f6e27f;
-      border: 2px solid #d4af37;
-      padding: 1rem;
-      box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.4);
+    html {
+      scroll-behavior: smooth;
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const links = document.querySelectorAll("nav a");
-      const sections = document.querySelectorAll(".content-box");
-
-      const defaultSection = document.getElementById("about");
-      if (defaultSection) defaultSection.classList.add("active");
-
-      links.forEach(link => {
-        link.addEventListener("click", e => {
-          e.preventDefault();
-          const id = link.getAttribute("href").substring(1);
-
-          sections.forEach(section => {
-            section.classList.remove("active");
-          });
-
-          const target = document.getElementById(id);
-          if (target) target.classList.add("active");
-        });
-      });
-    });
-  </script>
 </head>
-<body>
-  <header>
-    <h1>Darkline Studio</h1>
-    <div class="gold-line"></div>
-    <p>Project Management & Event Coordination</p>
+<body class="bg-cover bg-center text-white" style="background-image: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/9f12ab25d5abbc024ccb67b00064077bb1387d89/GreenBackground.png');">
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-sm shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+      <img src="https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/5d3e566a59c61ab38e95f5a97b17ffd4f65f02e8/Main%20Logo.svg" alt="Darkline Studio Logo" class="h-10">
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="#services" class="hover:text-green-300">Services</a>
+        <a href="#about" class="hover:text-green-300">About</a>
+        <a href="#contact" class="hover:text-green-300">Contact Us</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">ABOUT</a>
-    <a href="#services">SERVICES</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Darkline Studio</h1>
+    <p class="text-lg md:text-xl max-w-xl">Elevating your operations through seamless project management and coordination.</p>
+  </section>
 
-  <div id="about" class="content-box active">
-    <p>Hello, my name is Danielle Blackwood. I specialize in project management and event coordination with a focus on creative and meaningful work.</p>
-    <p>[Add a short professional biography, background, or your mission here.]</p>
-  </div>
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-black/80 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Services</h2>
+      <ul class="space-y-4 text-lg">
+        <li>• End-to-end project coordination</li>
+        <li>• Technical and creative project oversight</li>
+        <li>• Freelance project planning & consulting</li>
+        <li>• Event project support & vendor liaison</li>
+      </ul>
+    </div>
+  </section>
 
-  <div id="services" class="content-box">
-    <p>Our services include timeline development, vendor coordination, logistics planning, budget tracking, and more—tailored to your event or project needs.</p>
-    <p>[You can break this into bulleted offerings or include package descriptions.]</p>
-  </div>
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">About Darkline Studio</h2>
+      <p class="text-lg leading-relaxed">
+        Founded on precision, creativity, and clarity, Darkline Studio is your partner in professional project execution.
+        With experience spanning architecture, events, and independent contracting, we bring tailored solutions and clear communication to every client.
+      </p>
+    </div>
+  </section>
 
-  <div id="contact" class="content-box">
-    <p>Contact us at <a href="mailto:hello@darkline.studio" style="color: #f6e27f; text-decoration: underline;">hello@darkline.studio</a> or follow us on social media @DarklineStudio for updates and availability.</p>
-    <p>[You could also embed a contact form here or list office hours and response time expectations.]</p>
-  </div>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-black/80 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <p class="mb-4">Interested in working together? Let's connect!</p>
+      <a href="mailto:hello@darkline.studio" class="text-green-300 underline hover:text-green-400">hello@darkline.studio</a>
+    </div>
+  </section>
 
-  <footer>
-    &copy; 2025 Darkline Studio. All rights reserved.
+  <!-- Footer -->
+  <footer class="text-center text-sm py-6 bg-black/60">
+    <p>&copy; 2025 Darkline Studio. All rights reserved.</p>
   </footer>
 </body>
 </html>
