@@ -9,9 +9,20 @@
     html {
       scroll-behavior: smooth;
     }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/9f12ab25d5abbc024ccb67b00064077bb1387d89/GreenBackground.png') center center / cover no-repeat;
+      z-index: -1;
+      image-rendering: auto;
+    }
   </style>
 </head>
-<body class="bg-cover bg-center text-white" style="background-image: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/9f12ab25d5abbc024ccb67b00064077bb1387d89/GreenBackground.png');">
+<body class="text-white">
   <!-- Navigation -->
   <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-sm shadow-md">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
@@ -25,7 +36,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
     <img src="https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/5d3e566a59c61ab38e95f5a97b17ffd4f65f02e8/Main%20Logo.svg" alt="Darkline Studio Logo" class="h-48 md:h-72 mb-6">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Darkline Studio</h1>
     <p class="text-lg md:text-xl max-w-xl">Elevating your operations through seamless project management and coordination.</p>
