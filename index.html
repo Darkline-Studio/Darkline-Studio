@@ -6,6 +6,13 @@
   <title>Darkline Studio | Project Management</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    @font-face {
+      font-family: 'BrandinkSans';
+      src: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/155d80ee96a5eed2154150114d9128e9df02282b/BrandinkSans-Light.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -20,26 +27,25 @@
       z-index: -1;
       image-rendering: auto;
     }
+    .brandink-nav {
+      font-family: 'BrandinkSans', sans-serif;
+      color: #FFD700;
+    }
   </style>
 </head>
 <body class="text-white">
-  <!-- Navigation -->
-  <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-sm shadow-md">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
-      <div class="h-10"></div> <!-- Spacer since logo is now in hero section -->
-      <nav class="space-x-6 text-sm font-semibold">
-        <a href="#services" class="hover:text-green-300">Services</a>
-        <a href="#about" class="hover:text-green-300">About</a>
-        <a href="#contact" class="hover:text-green-300">Contact Us</a>
-      </nav>
-    </div>
-  </header>
-
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
     <img src="https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/5d3e566a59c61ab38e95f5a97b17ffd4f65f02e8/Main%20Logo.svg" alt="Darkline Studio Logo" class="h-48 md:h-72 mb-6">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Darkline Studio</h1>
-    <p class="text-lg md:text-xl max-w-xl">Elevating your operations through seamless project management and coordination.</p>
+    <p class="text-lg md:text-xl max-w-xl mb-10">Elevating your operations through seamless project management and coordination.</p>
+
+    <!-- Navigation (moved below welcome) -->
+    <nav class="brandink-nav space-x-8 text-lg font-normal">
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#contact" class="hover:underline">Contact Us</a>
+    </nav>
   </section>
 
   <!-- Services Section -->
