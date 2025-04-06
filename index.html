@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,26 +10,49 @@
       src: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/155d80ee96a5eed2154150114d9128e9df02282b/BrandinkSans-Light.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
-    }
+    }html {
+  scroll-behavior: smooth;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/9f12ab25d5abbc024ccb67b00064077bb1387d89/GreenBackground.png') center center / cover no-repeat;
+  z-index: -1;
+  image-rendering: auto;
+}
+.brandink-nav {
+  font-family: 'BrandinkSans', sans-serif;
+  color: #FFD700;
+  text-transform: uppercase;
+}
+.brandink-nav a {
+  position: relative;
+  padding: 0.25rem 0.5rem;
+}
+.brandink-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
+}
+.brandink-nav a:hover::after,
+.brandink-nav a:focus::after {
+  width: 100%;
+}
+.brandink-nav .divider::after {
+  content: "|";
+  margin: 0 0.75rem;
+  color: #FFD700;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/9f12ab25d5abbc024ccb67b00064077bb1387d89/GreenBackground.png') center center / cover no-repeat;
-      z-index: -1;
-      image-rendering: auto;
-    }
-    .brandink-nav {
-      font-family: 'BrandinkSans', sans-serif;
-      color: #FFD700;
-    }
   </style>
 </head>
 <body class="text-white">
@@ -38,18 +60,16 @@
   <section class="h-screen flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
     <img src="https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/5d3e566a59c61ab38e95f5a97b17ffd4f65f02e8/Main%20Logo.svg" alt="Darkline Studio Logo" class="h-48 md:h-72 mb-6">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Darkline Studio</h1>
-    <p class="text-lg md:text-xl max-w-xl mb-10">Elevating your operations through seamless project management and coordination.</p>
+    <p class="text-lg md:text-xl max-w-xl mb-10">Elevating your operations through seamless project management and coordination.</p><!-- Navigation (below welcome) -->
+<nav class="brandink-nav text-lg font-normal border-t border-b border-yellow-500 py-2">
+  <a href="#services">Services</a>
+  <span class="divider"></span>
+  <a href="#about">About</a>
+  <span class="divider"></span>
+  <a href="#contact">Contact Us</a>
+</nav>
 
-    <!-- Navigation (moved below welcome) -->
-    <nav class="brandink-nav space-x-8 text-lg font-normal">
-      <a href="#services" class="hover:underline">Services</a>
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#contact" class="hover:underline">Contact Us</a>
-    </nav>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-20 bg-black/80 px-6">
+  </section>  <!-- Services Section -->  <section id="services" class="py-20 bg-black/80 px-6">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold mb-6 text-center">Services</h2>
       <ul class="space-y-4 text-lg">
@@ -59,10 +79,7 @@
         <li>• Event project support & vendor liaison</li>
       </ul>
     </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6">
+  </section>  <!-- About Section -->  <section id="about" class="py-20 px-6">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">About Darkline Studio</h2>
       <p class="text-lg leading-relaxed">
@@ -70,19 +87,13 @@
         With experience spanning architecture, events, and independent contracting, we bring tailored solutions and clear communication to every client.
       </p>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-black/80 px-6">
+  </section>  <!-- Contact Section -->  <section id="contact" class="py-20 bg-black/80 px-6">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
       <p class="mb-4">Interested in working together? Let's connect!</p>
       <a href="mailto:hello@darkline.studio" class="text-green-300 underline hover:text-green-400">hello@darkline.studio</a>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-sm py-6 bg-black/60">
+  </section>  <!-- Footer -->  <footer class="text-center text-sm py-6 bg-black/60">
     <p>&copy; 2025 Darkline Studio. All rights reserved.</p>
   </footer>
 </body>
