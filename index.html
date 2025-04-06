@@ -53,6 +53,9 @@ body::before {
   margin: 0 0.75rem;
   color: #FFD700;
 }
+.content-container {
+  @apply bg-white/10 backdrop-blur-md rounded-xl shadow-lg;
+}
 
   </style>
   <script>
@@ -82,28 +85,28 @@ body::before {
   <a onclick="showSection('contact')">Contact Us</a>
 </nav>
 
-  </section>  <!-- Services Section -->  <section id="services" style="display:none;" class="pt-4 pb-12 bg-black/70 px-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold mb-4 text-center">Services</h2>
-      <ul class="space-y-4 text-lg">
+  </section>  <!-- Services Section -->  <section id="services" style="display:none;" class="pt-4 pb-12 px-4">
+    <div class="max-w-4xl mx-auto content-container p-6">
+      <h2 class="text-3xl font-bold mb-4 text-center text-yellow-300">Services</h2>
+      <ul class="space-y-4 text-lg text-yellow-100">
         <li>• End-to-end project coordination</li>
         <li>• Technical and creative project oversight</li>
         <li>• Freelance project planning & consulting</li>
         <li>• Event project support & vendor liaison</li>
       </ul>
     </div>
-  </section>  <!-- About Section -->  <section id="about" style="display:none;" class="pt-4 pb-12 bg-black/70 px-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-4">About Darkline Studio</h2>
-      <p class="text-lg leading-relaxed">
+  </section>  <!-- About Section -->  <section id="about" style="display:none;" class="pt-4 pb-12 px-4">
+    <div class="max-w-3xl mx-auto content-container p-6 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-300">About Darkline Studio</h2>
+      <p class="text-lg leading-relaxed text-yellow-100">
         Founded on precision, creativity, and clarity, Darkline Studio is your partner in professional project execution.
         With experience spanning architecture, events, and independent contracting, we bring tailored solutions and clear communication to every client.
       </p>
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact" style="display:none;" class="pt-4 pb-12 bg-black/70 px-6">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-      <p class="mb-2">Interested in working together? Let's connect!</p>
+  </section>  <!-- Contact Section -->  <section id="contact" style="display:none;" class="pt-4 pb-12 px-4">
+    <div class="max-w-2xl mx-auto content-container p-6 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-300">Contact Us</h2>
+      <p class="mb-2 text-yellow-100">Interested in working together? Let's connect!</p>
       <a href="mailto:hello@darkline.studio" class="text-green-300 underline hover:text-green-400">hello@darkline.studio</a>
     </div>
   </section>  <!-- Footer -->  <footer class="text-center text-sm py-6 bg-black/60">
