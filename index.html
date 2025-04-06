@@ -59,7 +59,8 @@ body::before {
     function showSection(id) {
       const sections = ['services', 'about', 'contact'];
       sections.forEach(section => {
-        document.getElementById(section).style.display = section === id ? 'block' : 'none';
+        const el = document.getElementById(section);
+        el.style.display = section === id ? 'block' : 'none';
       });
     }window.addEventListener('DOMContentLoaded', () => {
   showSection(null); // Hide all on load
@@ -69,7 +70,7 @@ body::before {
 </head>
 <body class="text-white">
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
+  <section class="py-16 flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
     <h1 class="text-3xl md:text-4xl font-bold mb-2">Welcome to</h1>
     <img src="https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/5d3e566a59c61ab38e95f5a97b17ffd4f65f02e8/Main%20Logo.svg" alt="Darkline Studio Logo" class="h-48 md:h-72 mb-6">
     <p class="text-lg md:text-xl max-w-xl mb-2">Elevating your operations through seamless project management and coordination.</p><!-- Navigation (below welcome) -->
