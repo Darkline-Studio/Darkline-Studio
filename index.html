@@ -32,6 +32,7 @@ body::before {
 .brandink-nav a {
   position: relative;
   padding: 0.25rem 0.5rem;
+  cursor: pointer;
 }
 .brandink-nav a::after {
   content: "";
@@ -54,22 +55,33 @@ body::before {
 }
 
   </style>
+  <script>
+    function showSection(id) {
+      const sections = ['services', 'about', 'contact'];
+      sections.forEach(section => {
+        document.getElementById(section).style.display = section === id ? 'block' : 'none';
+      });
+    }window.addEventListener('DOMContentLoaded', () => {
+  showSection(null); // Hide all on load
+});
+
+  </script>
 </head>
 <body class="text-white">
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">Welcome to</h1>
     <img src="https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/5d3e566a59c61ab38e95f5a97b17ffd4f65f02e8/Main%20Logo.svg" alt="Darkline Studio Logo" class="h-48 md:h-72 mb-6">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Darkline Studio</h1>
     <p class="text-lg md:text-xl max-w-xl mb-10">Elevating your operations through seamless project management and coordination.</p><!-- Navigation (below welcome) -->
 <nav class="brandink-nav text-lg font-normal border-t border-b border-yellow-500 py-2">
-  <a href="#services">Services</a>
+  <a onclick="showSection('services')">Services</a>
   <span class="divider"></span>
-  <a href="#about">About</a>
+  <a onclick="showSection('about')">About</a>
   <span class="divider"></span>
-  <a href="#contact">Contact Us</a>
+  <a onclick="showSection('contact')">Contact Us</a>
 </nav>
 
-  </section>  <!-- Services Section -->  <section id="services" class="py-20 bg-black/80 px-6">
+  </section>  <!-- Services Section -->  <section id="services" style="display:none;" class="py-20 bg-black/80 px-6">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold mb-6 text-center">Services</h2>
       <ul class="space-y-4 text-lg">
@@ -79,7 +91,7 @@ body::before {
         <li>• Event project support & vendor liaison</li>
       </ul>
     </div>
-  </section>  <!-- About Section -->  <section id="about" class="py-20 px-6">
+  </section>  <!-- About Section -->  <section id="about" style="display:none;" class="py-20 px-6">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">About Darkline Studio</h2>
       <p class="text-lg leading-relaxed">
@@ -87,7 +99,7 @@ body::before {
         With experience spanning architecture, events, and independent contracting, we bring tailored solutions and clear communication to every client.
       </p>
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact" class="py-20 bg-black/80 px-6">
+  </section>  <!-- Contact Section -->  <section id="contact" style="display:none;" class="py-20 bg-black/80 px-6">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
       <p class="mb-4">Interested in working together? Let's connect!</p>
