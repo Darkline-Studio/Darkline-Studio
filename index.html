@@ -3,7 +3,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Darkline Studio | Project Management</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @font-face {
       font-family: 'BrandinkSans';
@@ -12,6 +11,11 @@
       font-style: normal;
     }html {
   scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
 }
 body::before {
   content: "";
@@ -22,39 +26,64 @@ body::before {
   height: 100vh;
   background: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/9f12ab25d5abbc024ccb67b00064077bb1387d89/GreenBackground.png') center center / cover no-repeat;
   z-index: -1;
-  image-rendering: auto;
 }
 .brandink-nav {
   font-family: 'BrandinkSans', sans-serif;
   color: #FFD700;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0;
 }
 .brandink-nav a {
   position: relative;
-  padding: 0.25rem 0.5rem;
   cursor: pointer;
+  text-decoration: none;
+  color: #FFD700;
 }
 .brandink-nav a::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 0;
   height: 2px;
   background-color: #FFD700;
   transition: width 0.3s ease;
 }
-.brandink-nav a:hover::after,
-.brandink-nav a:focus::after {
+.brandink-nav a:hover::after {
   width: 100%;
 }
-.brandink-nav .divider::after {
+.divider::after {
   content: "|";
   margin: 0 0.75rem;
   color: #FFD700;
 }
-.content-container {
-  @apply bg-white/10 backdrop-blur-md rounded-xl shadow-lg;
+.section-box {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+.section-box h2 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+.section-box p,
+.section-box li {
+  color: #fef9e7;
+}
+section.hero {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+section.hero img {
+  max-height: 18rem;
+  margin: 1rem 0;
 }
 
   </style>
@@ -66,18 +95,18 @@ body::before {
         el.style.display = section === id ? 'block' : 'none';
       });
     }window.addEventListener('DOMContentLoaded', () => {
-  showSection(null); // Hide all on load
+  showSection(null);
 });
 
   </script>
 </head>
-<body class="text-white">
+<body>
   <!-- Hero Section -->
-  <section class="py-16 flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
-    <h1 class="text-3xl md:text-4xl font-bold mb-2">Welcome to</h1>
-    <img src="https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/5d3e566a59c61ab38e95f5a97b17ffd4f65f02e8/Main%20Logo.svg" alt="Darkline Studio Logo" class="h-48 md:h-72 mb-6">
-    <p class="text-lg md:text-xl max-w-xl mb-2">Elevating your operations through seamless project management and coordination.</p><!-- Navigation (below welcome) -->
-<nav class="brandink-nav text-lg font-normal mb-0">
+  <section class="hero">
+    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Welcome to</h1>
+    <img src="https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/5d3e566a59c61ab38e95f5a97b17ffd4f65f02e8/Main%20Logo.svg" alt="Darkline Studio Logo">
+    <p style="font-size: 1.125rem; max-width: 600px; margin: 0 auto 1.5rem;">Elevating your operations through seamless project management and coordination.</p><!-- Navigation -->
+<nav class="brandink-nav">
   <a onclick="showSection('services')">Services</a>
   <span class="divider"></span>
   <a onclick="showSection('about')">About</a>
@@ -85,31 +114,31 @@ body::before {
   <a onclick="showSection('contact')">Contact Us</a>
 </nav>
 
-  </section>  <!-- Services Section -->  <section id="services" style="display:none;" class="pt-4 pb-12 px-4">
-    <div class="max-w-4xl mx-auto content-container p-6">
-      <h2 class="text-3xl font-bold mb-4 text-center text-yellow-300">Services</h2>
-      <ul class="space-y-4 text-lg text-yellow-100">
+  </section>  <!-- Services Section -->  <section id="services" style="display:none;">
+    <div class="section-box">
+      <h2>Services</h2>
+      <ul>
         <li>• End-to-end project coordination</li>
         <li>• Technical and creative project oversight</li>
         <li>• Freelance project planning & consulting</li>
         <li>• Event project support & vendor liaison</li>
       </ul>
     </div>
-  </section>  <!-- About Section -->  <section id="about" style="display:none;" class="pt-4 pb-12 px-4">
-    <div class="max-w-3xl mx-auto content-container p-6 text-center">
-      <h2 class="text-3xl font-bold mb-4 text-yellow-300">About Darkline Studio</h2>
-      <p class="text-lg leading-relaxed text-yellow-100">
+  </section>  <!-- About Section -->  <section id="about" style="display:none;">
+    <div class="section-box">
+      <h2>About Darkline Studio</h2>
+      <p>
         Founded on precision, creativity, and clarity, Darkline Studio is your partner in professional project execution.
         With experience spanning architecture, events, and independent contracting, we bring tailored solutions and clear communication to every client.
       </p>
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact" style="display:none;" class="pt-4 pb-12 px-4">
-    <div class="max-w-2xl mx-auto content-container p-6 text-center">
-      <h2 class="text-3xl font-bold mb-4 text-yellow-300">Contact Us</h2>
-      <p class="mb-2 text-yellow-100">Interested in working together? Let's connect!</p>
-      <a href="mailto:hello@darkline.studio" class="text-green-300 underline hover:text-green-400">hello@darkline.studio</a>
+  </section>  <!-- Contact Section -->  <section id="contact" style="display:none;">
+    <div class="section-box">
+      <h2>Contact Us</h2>
+      <p>Interested in working together? Let's connect!</p>
+      <a href="mailto:hello@darkline.studio" style="color:#90ee90; text-decoration: underline;">hello@darkline.studio</a>
     </div>
-  </section>  <!-- Footer -->  <footer class="text-center text-sm py-6 bg-black/60">
+  </section>  <footer style="text-align:center; font-size: 0.875rem; padding: 1.5rem; background-color: rgba(0, 0, 0, 0.6);">
     <p>&copy; 2025 Darkline Studio. All rights reserved.</p>
   </footer>
 </body>
