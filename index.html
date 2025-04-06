@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,104 +11,111 @@
       src: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/155d80ee96a5eed2154150114d9128e9df02282b/BrandinkSans-Light.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
-    }html {
-  scroll-behavior: smooth;
-}
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/9f12ab25d5abbc024ccb67b00064077bb1387d89/GreenBackground.png') center center / cover no-repeat;
-  z-index: -1;
-  image-rendering: auto;
-}
-.brandink-nav {
-  font-family: 'BrandinkSans', sans-serif;
-  color: #FFD700;
-  text-transform: uppercase;
-}
-.brandink-nav a {
-  position: relative;
-  padding: 0.25rem 0.5rem;
-  cursor: pointer;
-}
-.brandink-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #FFD700;
-  transition: width 0.3s ease;
-}
-.brandink-nav a:hover::after,
-.brandink-nav a:focus::after {
-  width: 100%;
-}
-.brandink-nav .divider::after {
-  content: "|";
-  margin: 0 0.75rem;
-  color: #FFD700;
-}
+    }
 
+    html {
+      scroll-behavior: smooth;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/9f12ab25d5abbc024ccb67b00064077bb1387d89/GreenBackground.png') center center / cover no-repeat;
+      z-index: -1;
+      image-rendering: auto;
+    }
+    .brandink-nav {
+      font-family: 'BrandinkSans', sans-serif;
+      color: #FFD700;
+    }
   </style>
-  <script>
-    function showSection(id) {
-      const sections = ['services', 'about', 'contact'];
-      sections.forEach(section => {
-        const el = document.getElementById(section);
-        el.style.display = section === id ? 'block' : 'none';
-      });
-    }window.addEventListener('DOMContentLoaded', () => {
-  showSection('services'); // Show Services by default
-});
-
-  </script>
 </head>
 <body class="text-white">
   <!-- Hero Section -->
-  <section class="py-16 flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
-    <h1 class="text-3xl md:text-4xl font-bold mb-2">Welcome to</h1>
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
     <img src="https://raw.githubusercontent.com/Darkline-Studio/Darkline-Studio/5d3e566a59c61ab38e95f5a97b17ffd4f65f02e8/Main%20Logo.svg" alt="Darkline Studio Logo" class="h-48 md:h-72 mb-6">
-    <p class="text-lg md:text-xl max-w-xl mb-2">Elevating your operations through seamless project management and coordination.</p><!-- Navigation (below welcome) -->
-<nav class="brandink-nav text-lg font-normal mb-0">
-  <a onclick="showSection('services')">Services</a>
-  <span class="divider"></span>
-  <a onclick="showSection('about')">About</a>
-  <span class="divider"></span>
-  <a onclick="showSection('contact')">Contact Us</a>
-</nav>
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Darkline Studio</h1>
+    <p class="text-lg md:text-xl max-w-xl mb-10">Elevating your operations through seamless project management and coordination.</p>
 
-  </section>  <!-- Services Section -->  <section id="services" class="pt-4 pb-12 px-4">
-    <div class="max-w-3xl min-h-[320px] mx-auto bg-white/10 backdrop-blur-md shadow-2xl p-6 border-t-2 border-b-2 border-yellow-400">
-      <h2 class="text-3xl font-bold mb-4 text-center text-yellow-300">Services</h2>
-      <ul class="space-y-4 text-lg text-yellow-100">
+    <!-- Navigation (below welcome) -->
+    <nav class="brandink-nav space-x-8 text-lg font-normal">
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#contact" class="hover:underline">Contact Us</a>
+    </nav>
+  </section>
+
+  <!-- Intro Section (Dopetrope-inspired) -->
+  <section class="py-20 bg-black/70 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col items-center">
+          <div class="text-4xl mb-4">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Strategic Oversight</h3>
+          <p class="text-sm">Clear processes and actionable timelines tailored for every project.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="text-4xl mb-4">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Efficient Execution</h3>
+          <p class="text-sm">We keep your team aligned and projects moving with minimal friction.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="text-4xl mb-4">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Creative Adaptability</h3>
+          <p class="text-sm">Solutions that flex with your goals, whether technical or event-based.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-black/80 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Services</h2>
+      <ul class="space-y-4 text-lg">
         <li>• End-to-end project coordination</li>
         <li>• Technical and creative project oversight</li>
         <li>• Freelance project planning & consulting</li>
         <li>• Event project support & vendor liaison</li>
       </ul>
     </div>
-  </section>  <!-- About Section -->  <section id="about" style="display:none;" class="pt-4 pb-12 px-4">
-    <div class="max-w-3xl min-h-[320px] mx-auto bg-white/10 backdrop-blur-md shadow-2xl p-6 text-center border-t-2 border-b-2 border-yellow-400">
-      <h2 class="text-3xl font-bold mb-4 text-yellow-300">About Darkline Studio</h2>
-      <p class="text-lg leading-relaxed text-yellow-100">
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">About Darkline Studio</h2>
+      <p class="text-lg leading-relaxed">
         Founded on precision, creativity, and clarity, Darkline Studio is your partner in professional project execution.
         With experience spanning architecture, events, and independent contracting, we bring tailored solutions and clear communication to every client.
       </p>
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact" style="display:none;" class="pt-4 pb-12 px-4">
-    <div class="max-w-3xl min-h-[320px] mx-auto bg-white/10 backdrop-blur-md shadow-2xl p-6 text-center border-t-2 border-b-2 border-yellow-400">
-      <h2 class="text-3xl font-bold mb-4 text-yellow-300">Contact Us</h2>
-      <p class="mb-2 text-yellow-100">Interested in working together? Let's connect!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-black/80 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <p class="mb-4">Interested in working together? Let's connect!</p>
       <a href="mailto:hello@darkline.studio" class="text-green-300 underline hover:text-green-400">hello@darkline.studio</a>
     </div>
-  </section>  <!-- Footer -->  <footer class="text-center text-sm py-6 bg-black/60">
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm py-6 bg-black/60">
     <p>&copy; 2025 Darkline Studio. All rights reserved.</p>
   </footer>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
